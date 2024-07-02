@@ -13,6 +13,7 @@ mongoose
 const genres = require("./routes/genres");
 const home = require("./routes/home");
 const customers = require("./routes/customers");
+const movies = require("./routes/movies");
 
 app.use(express.json());
 app.use(helmet());
@@ -21,6 +22,7 @@ app.use(logger);
 
 app.use("/api/genres", genres);
 app.use("/api/customers", customers);
+app.use("/api/movies", movies);
 app.use("/", home);
 
 app.listen(3000, () => console.log("Listening on port 3000..."));
